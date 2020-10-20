@@ -34,6 +34,6 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(bldRpckgw2)
 
- fars_summarize_2014 <- fars_summarize_years(2014)
- fars_map_NY_2014 <- fars_map_state(50, 2014)
+# fars_summarize_2014 <- fars_summarize_years(2014)
+# fars_map_NY_2014 <- fars_map_state(50, 2014)
 ```
