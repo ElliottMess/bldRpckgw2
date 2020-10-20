@@ -1,0 +1,23 @@
+---
+title: "fars_functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fars_functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This package aims at facilitating the use of the [US National Highway Traffic Safety Administration's Fatality Analysis Reporting System](http://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)}{US National Highway Traffic Safety Administration's Fatality Analysis Reporting System).
+
+# Main functions
+
+```{r setup}
+library(bldRpckgw2)
+```
