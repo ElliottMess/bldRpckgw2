@@ -20,4 +20,7 @@ This package aims at facilitating the use of the [US National Highway Traffic Sa
 
 ```{r setup}
 library(bldRpckgw2)
+#  fars_summarize_2014 <- fars_summarize_years(2014)
+#  fars_map_NY_2014 <- fars_map_state(50, 2014)
+
 ```
