@@ -16,11 +16,51 @@ knitr::opts_chunk$set(
 
 This package aims at facilitating the use of the [US National Highway Traffic Safety Administration's Fatality Analysis Reporting System](http://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)}{US National Highway Traffic Safety Administration's Fatality Analysis Reporting System).
 
+# Loading the package
+
+Install package from github
+
+>remotes::install_github("ElliottMess/bldRpckgw2") # Only for the first installation
+
+Load package
+
+>library("bldRpckgw2")
+
 # Main functions
+## fars_read
 
-```{r setup}
-library(bldRpckgw2)
-#  fars_summarize_2014 <- fars_summarize_years(2014)
-#  fars_map_NY_2014 <- fars_map_state(50, 2014)
+Simple function to read a .csv file from the filename path provided. It first verifies if the filename path is valid, and stops the function if not. the readr::read_csv function is used to read the file, with all messages suppressed and progress to FALSE.
 
-```
+Example:
+
+> x <- fars_read("data.csv")
+
+
+## fars_map_state
+
+Create a map of all accidents for a year
+
+Made to retrieve data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System
+
+map <- fars_map_state("1", 2014)
+
+
+## fars_read_years
+
+Read data from a list of years. Uses fars_read
+
+>fars_read_years(list("2012", "2013"))
+
+## fars_summarize_years
+
+Count number of accidents by year and month from list of years dataframes
+
+>fars_summarize_years(list(2012, 2013))
+
+>fars_summarize_years(list("2012", "2013"))
+
+## make_filename
+
+Create 'filename' path from the 'year' provided.
+
+>filepath <- make_filename(2012)
